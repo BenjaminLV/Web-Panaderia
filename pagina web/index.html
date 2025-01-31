@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERERY</title>
+
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="redes">
+            <a href="https://www.facebook.com"><img src="estilos/fotos/facebook.png" alt="Facebook"></a>
+            <a href="https://www.Instagram.com"><img src="estilos/fotos/Instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com"><img src="estilos/fotos/twitter.png" alt="Twitter"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+            <img src="estilos/fotos/Logo.png" alt="MERERY Logo">
+        </a>
+        </div>
+        <div class="inicio_sesion">
+            <a href="https://www.google.com/?hl=es">Iniciar Sesión</a>
+        </div>
+    </header>
+
+
+
+
+    <!--Caja de navegador-->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="paginas/contacto.html">Contacto</a>
+        <a href="#quienes">Sobre Nosotros</a>
+        <div class="dropdown">
+            <a href="paginas/productos/productos.html">Productos ></a>
+            <div class="dropdown-content">
+                <a href="paginas/productos/dulces_temporada/Dulces temporada.html">Dulces de Temporada</a>
+                <a href="paginas/productos/panaderia/Panaderia.html">Panadería</a>
+                <a href="paginas/productos/dulce/Dulce.html">Dulces</a>
+                <a href="paginas/productos/salado/Salado.html">Salados</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!--imagen inicio mas eslogan-->
+    <div class="hero">
+        <h2>"Despierta tus sentidos <br>con cada bocado"</h2>
+    </div>
+
+
+
+    <br><br><br><br><br><br><br><br><br>
+
+
+
+
+    <!--Quienes somos-->
+    <div class="quienes-somos-section" id="quienes">
+        <div class="imagenes">
+            <img src="estilos/fotos/panadero.png" alt="Imagen 1" class="imagen-superior">
+            <img src="estilos/fotos/macaron.png" alt="Imagen 2" class="imagen-inferior">
+        </div>
+        <div class="texto">
+            <h3>¿Quiénes Somos?</h3>
+            <p>En MERERY somos una pequeña panadería ubicada en el corazón de Granada, Andalucía. Nuestra historia comenzó con una pasión por los dulces que se remonta a nuestra infancia, cuando nos deleitábamos con los macarons que preparaban nuestras abuelas. Estos recuerdos dulces y nostálgicos nos inspiraron a convertir esa pasión en una profesión. <br><br>
+
+                Desde aquellos días de infancia, nuestro amor por la repostería y la panadería solo ha crecido. Decidimos abrir MERERY para compartir esos sabores y emociones con nuestra comunidad. Cada día, elaboramos una selección de productos caseros, desde los tradicionales macarons hasta panes artesanales, todo hecho con los ingredientes más frescos y mucho amor. <br><br>
+                
+                Nuestra misión es crear experiencias únicas y deliciosas para nuestros clientes, manteniendo siempre la esencia de lo casero y lo auténtico. En MERERY, cada bocado es una invitación a recordar los momentos más dulces de la vida. Así que, ya seas un vecino de siempre o alguien que pasa por Granada, te invitamos a descubrir el sabor de nuestra historia.</p>
+        </div>
+    </div>
+   
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <script>
+
+        let slideIndex = 0;
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll(".slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            const slidesContainer = document.querySelector(".slides");
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides(slideIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlides(slideIndex);
+        });
+
+    </script>
+
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <a href="paginas/productos/dulces_temporada/Dulces temporada.html">
+                    <img src="estilos/fotos/halloween.png" alt="Imagen 1">
+                    <div class="caption">Dulces de Temporada</div>
+                </a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <a href="paginas/productos/panaderia/Panaderia.html">
+                    <img src="estilos/fotos/pan.png" alt="Imagen 2">
+                    <div class="caption">Panadería</div>
+                </a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <a href="paginas/productos/dulce/Dulce.html">
+                    <img src="estilos/fotos/bolleria.png" alt="Imagen 1">
+                    <div class="caption">Dulces</div>
+                </a>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <a href="paginas/productos/salado/Salado.html">
+                    <img src="estilos/fotos/salados.png" alt="Imagen 1">
+                    <div class="caption">Salados</div>
+                </a>
+            </div>
+        </div>
+        <!-- Controles -->
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+    
+    
+    <br><br><br><br>
+
+
+    <!-- GIF con texto a la izquierda -->
+        <div class="gif-text-container" style="padding-right: 200px;">
+            <div class="texto">
+                <h3>CASERO</h3>
+                <p>En MERERY, todo lo que hacemos es casero. Desde nuestras recetas tradicionales hasta los ingredientes frescos que usamos, cada producto está hecho con cariño y dedicación. Creemos que el sabor de lo casero no tiene igual, y nos esforzamos en mantener esa esencia en todo lo que ofrecemos. 🥐🍞🍰 <br><br>
+
+                    Cada día, nuestras manos amasan, hornean y preparan delicias que hacen que nuestros clientes sientan el amor y la tradición en cada bocado. ¿Ya probaste alguno de nuestros panes recién horneados o nuestros dulces macarons?</p>
+            </div>
+            <div class="gif-container">
+                <img src="estilos/fotos/sacando_pan.gif" alt="GIF de fondo" id="background-gif">
+                
+            </div>
+        </div>
+   
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <img src="estilos/fotos/Logo.png" alt="Imagen">
+                <div class="redes">
+                    <a href="https://www.facebook.com"><img src="estilos/fotos/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.Instagram.com"><img src="estilos/fotos/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.twitter.com"><img src="estilos/fotos/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="list1">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="paginas/contacto.html">Contacto</a></li>
+                        <li><a href="#quienes">Sobre Nosotros</a></li>
+                        <li><a href="paginas/productos/productos.html">Productos </a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <br>
+                        <li>Telefono: 555-2463-2563</li>
+                        <li>Correo: Marery@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

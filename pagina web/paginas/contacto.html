@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <style>
+
+    body {
+      
+      color: black;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+    }
+    .left {
+      width: 50%;
+      padding: 20px;
+      margin-top: -50px;
+      margin-left: 80px;
+    }
+    .right {
+      width: 50%;
+      padding: 20px;
+      
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 80%;
+      padding: 10px;
+      color: black;
+      
+    }
+
+    </style>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="redes">
+            <a href="https://www.facebook.com"><img src="../estilos/fotos/facebook.png" alt="Facebook"></a>
+            <a href="https://www.Instagram.com"><img src="../estilos/fotos/Instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com"><img src="../estilos/fotos/twitter.png" alt="Twitter"></a>
+        </div>
+        <div class="logo">
+            <a href="../index.html">
+            <img src="../estilos/fotos/Logo.png" alt="MERERY Logo">
+        </a>
+        </div>
+        <div class="inicio_sesion">
+            <a href="https://www.google.com/?hl=es">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <!--Caja de navegador-->
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="../#quienes">Sobre Nosotros</a>
+        <div class="dropdown">
+            <a href="productos/productos.html">Productos ></a>
+            <div class="dropdown-content">
+                <a href="productos/dulces_temporada/Dulces temporada.html">Dulces de Temporada</a>
+                <a href="productos/panaderia/Panaderia.html">Panadería</a>
+                <a href="productos/dulce/Dulce.html">Dulces</a>
+                <a href="productos/salado/Salado.html">Salados</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="heroContacto">
+        <h2>CONTACTANOS</h2>
+    </div>
+    
+    <br><br><br>
+    <div class="container">
+        <div class="left">
+          <h1 style="font-family: caslon; font-size: xx-large;">Nuestra ubicación</h1>
+          <img src="../estilos/fotos/maps.png" alt="Descripción de la Imagen" width="650px" height="420px">
+          
+        </div>
+        <div class="right">
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" required />
+            </div>
+            <div class="form-group">
+              <label for="observaciones" >Observaciones:</label>
+              <textarea id="observaciones" name="observaciones" style="height: 150px;"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+     <br><br><br><br><br><br><br>
+
+      <div>
+        
+        	 <img src="../estilos/fotos/banner_contacto.png" alt="Imagen ancha" class="full-width-image" width="100%">
+      </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <img src="../estilos/fotos/Logo.png" alt="Imagen">
+                <div class="redes">
+                    <a href="https://www.facebook.com"><img src="../estilos/fotos/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.Instagram.com"><img src="../estilos/fotos/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.twitter.com"><img src="../estilos/fotos/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="list1">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="../#quienes">Sobre Nosotros</a></li>
+                        <li><a href="productos/productos.html">Productos</a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <br>
+                        <li>Telefono: 555-2463-2563</li>
+                        <li>Correo: Marery@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

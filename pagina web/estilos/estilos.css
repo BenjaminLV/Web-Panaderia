@@ -1,0 +1,610 @@
+@font-face{
+    
+    
+    
+    font-family: 'delicius';
+    src: url(DeliusSwashCaps-Regular.ttf);
+}
+
+@font-face{
+    
+    
+    
+    font-family: 'caslon';
+    src: url(LibreCaslonDisplay-Regular.ttf);
+}
+
+
+
+
+body {
+    background-image: url(fotos/fondoooo.png);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #4B3621; /*Marrón oscuro*/
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+
+
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1beaf; 
+    padding: 10px 20px;
+    color: #4B3621; /*Marrón oscuro*/
+}
+
+
+.redes, .inicio_sesion {
+    line-height: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.redes img, .inicio_sesion img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.logo img{
+    width: 290px;
+    height: 150px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+nav {
+    z-index: 1;
+    font-weight: bold;
+    background-color: #56162C; /*Marron*/
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+nav a {
+    
+    color: #FFF; /*Blanco*/
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+.dropdown {
+    
+   
+    position: relative;
+    
+}
+.dropdown a {
+    
+    display: inline-block;
+    padding: 10px;
+    
+}
+.dropdown img {
+    
+    height: 12px; /*Ajustar tamaño del ícono*/
+    width: 12px; /*Ajustar tamaño del ícono*/
+    vertical-align: middle; /*Alinear verticalmente con el texto*/
+    
+}
+.dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #56162C; /*Marrón*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+    border-radius: 5px;
+    top: 100%; /*Asegurar que el dropdown se despliegue debajo del enlace*/
+    left: 0;
+}
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+.dropdown-content a {
+    
+    font-weight: bold;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------index*/
+
+
+
+
+.hero {
+    position: relative;
+    background: url(fotos/fondo_inicio.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: delicius;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /*Fondo oscuro con transparencia*/
+    
+}
+.hero h2 {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+.quienes-somos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 80%;
+    gap: 20px;
+}
+.imagenes {
+    margin-bottom: 250px;
+    margin-left: 220px;
+    position: relative;
+    width: 50%;
+    
+    max-width: 300px;
+}
+.imagenes .imagen-superior {
+    
+    position: absolute;
+    top: 0;
+    left: -190px;
+    
+    width: 667px;
+    height: 1000px;
+    height: auto;
+    box-shadow: #56162C;
+}
+.imagenes .imagen-inferior {
+    position: relative;
+    border-radius: 15%;
+    width: 100%;
+    height: auto;
+    top: 250px;
+    left: 220px;
+}
+.texto {
+    
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 250px; 
+}
+
+.texto h3 {
+    font-family: caslon;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: auto;
+}   
+
+.texto p {
+    font-style: italic;
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.slider {
+    background-color: #CFC2B1;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Mantener las proporciones de la imagen y cortar el exceso*/
+    max-height: 600px; /*Asegura que todas las imágenes tengan la misma altura*/
+    max-width: 3000px;
+    filter: brightness(50%); /*Añadir filtro oscuro*/
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 100px;
+    font-family: caslon;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+.gif-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 80%;
+    gap: 150px;
+    margin-right: 100px;
+}
+
+.texto {
+    width: 50%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gif-container {
+    position: relative;
+    width: 50%;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+#background-gif {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#gif-control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+footer {
+    background-color: #56162C; /*Marrón*/
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-left img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none; /*Elimina el subrayado*/
+}
+
+.footer-links a:hover {
+    color: #B37452; /*Cambia el color cuando se pasa el ratón por encima*/
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.footer-right .list1, .footer-right .list2 {
+    flex: 1;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right li {
+    margin-bottom: 5px;
+}
+
+a:link, a:visited {
+    color: white; /*Cambia el color morado a blanco*/
+    text-decoration: none; /*Elimina el subrayado*/
+}
+
+a:hover {
+    color: #B37452; /*Cambia el color cuando se pasa el ratón por encima*/
+}
+
+a:active {
+    color: white; /*Cambia el color cuando el enlace está activo*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.heroContacto {
+    z-index: 0;
+    position: relative;
+    background: url(fotos/fondo_inicio.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: caslon;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+.heroContacto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /*Fondo oscuro con transparencia*/
+    z-index: 1;
+}
+.heroContacto h2 {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.halloween{
+    z-index: 0;
+    position: relative;
+    background: url(fotos/halloween.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: delicius;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.dulce{
+    z-index: 0;
+    position: relative;
+    background: url(fotos/bolleria.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: delicius;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.salado{
+    z-index: 0;
+    position: relative;
+    background: url(fotos/salados.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: delicius;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.pan{
+    z-index: 0;
+    position: relative;
+    background: url(fotos/pan.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /*Blanco*/
+    text-shadow: 2px 2px 4px #000;
+    font-family: delicius;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.container2 {
+    
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 40px; /*Doble de grande*/
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /*Doble de grande*/
+    margin-bottom: 40px; /*Añadir margen entre bloques*/
+    width: 80%;
+}
+.image2 {
+    margin-right: 40px; /*Doble de grande*/
+}
+.image2 img {
+    max-width: 400px; /*Doble de grande*/
+    height: auto;
+}
+.content2 {
+    max-width: 1200px; /*Doble de grande*/
+}
+.title2 {
+    font-family: delicius;
+    font-size: 4em; /*Doble de grande*/
+    margin-bottom: 20px; /*Doble de grande*/
+    color: #333;
+}
+.description {
+    font-size: 2em; /*Doble de grande*/
+    color: #666;
+}
